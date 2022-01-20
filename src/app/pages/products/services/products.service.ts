@@ -7,12 +7,11 @@ import { Product } from '../interface/product.interface';
   providedIn: 'root'
 })
 export class ProductsService {
-  
-  private apiURL='http://localhost:3000/products';
-  constructor(private http: HttpClient) { }
-  
+private apiURL='http://localhost:3000/products';
+  constructor(private http:HttpClient) { }
+
   getProducts():Observable<Product[]>{
     return this.http.get<Product[]>(this.apiURL);
-  }
 
+  }
 }
